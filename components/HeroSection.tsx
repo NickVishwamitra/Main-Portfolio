@@ -45,9 +45,9 @@ const HeroSection = () => {
         className={styles.lottie}
         loop
         mode="normal"
-        src="https://assets10.lottiefiles.com/packages/lf20_dfiwwxyq.json"
+        src="https://assets9.lottiefiles.com/packages/lf20_zxmmpjnt.json"
         style={{
-          width: phoneSize ? '20%' : '3%',
+          width: phoneSize ? '15%' : '3%',
           position: 'absolute',
           top: phoneSize ? '40%' : '40%',
         }}
