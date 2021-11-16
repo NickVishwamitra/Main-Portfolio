@@ -33,8 +33,15 @@ const Skills = () => {
           <Avatar radius="xl" src={props.src} />
           <Text style={{ fontWeight: 700, fontSize: '1.5rem', color: '#FFF' }}>{props.title}</Text>
         </div>
-        <div style={{ display: 'flex', alignItems: 'center', gap: '5%', width: '90%' }}>
-          <Progress value={props.value} size="medium" />
+        <div
+          style={{
+            display: 'flex',
+            alignItems: 'center',
+            gap: '5%',
+            width: phoneSize ? '100%' : '90%',
+          }}
+        >
+          <Progress value={props.value} size="medium" color={props.color} />
           <Text style={{ color: '#FFF', fontSize: '1.25rem' }}>{props.level}</Text>
         </div>
       </div>
@@ -107,6 +114,7 @@ const Skills = () => {
           src="https://decodenatura.com/static/fb8aa1bb70c9925ce1ae22dc2711b343/nextjs-logo.png"
           value={expert}
           level="Expert"
+          color="gradient"
         />
         <SkillItem
           title="CSS"
@@ -119,12 +127,14 @@ const Skills = () => {
           src="https://www.w3.org/html/logo/downloads/HTML5_Badge_512.png"
           value={expert}
           level="Expert"
+          color="#E44E26"
         />
         <SkillItem
           title="SASS"
           src="https://sass-lang.com/assets/img/styleguide/seal-color-aef0354c.png"
           value={intermediate}
           level="Intermediate"
+          color="#f4a"
         />
       </Card>
     </div>
