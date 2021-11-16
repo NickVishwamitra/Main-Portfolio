@@ -1,0 +1,17 @@
+.typistText {
+  font-size: 1.5rem;
+}
+
+.iconContainer {
+  display: flex;
+  gap: 15%;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2%;
+}
+
+.socialIcon:hover {
+  color: white;
+  transform: scale(1.25);
+  cursor: pointer;
+}
