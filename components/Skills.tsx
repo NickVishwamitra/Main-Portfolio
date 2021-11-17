@@ -53,7 +53,12 @@ const Skills = () => {
             width: phoneSize ? '100%' : '95%',
           }}
         >
-          <Progress value={props.value} size="medium" color={props.color} />
+          <Progress
+            value={props.value}
+            size="medium"
+            color={props.color}
+            indeterminated={props.indeterminate}
+          />
           {/* <Text style={{ color: '#FFF', fontSize: '1.25rem' }}>{props.level}</Text> */}
           <Stars starLevel={props.starLevel} />
         </div>
@@ -136,6 +141,44 @@ const Skills = () => {
       </Fragment>
     );
   };
+
+  const Blockchain = () => {
+    return (
+      <Fragment>
+        <SkillItem
+          title="Web3.js"
+          src="https://repository-images.githubusercontent.com/24655114/c71c5800-6a8c-11e9-9117-8ec357c9f69e"
+          color="gradient"
+          value={intermediate}
+          starLevel={4}
+        />
+        <SkillItem
+          title="Solidity"
+          src="https://download.logo.wine/logo/Solidity/Solidity-Logo.wine.png"
+          color="secondary"
+          value={intermediate}
+          starLevel={2}
+        />
+
+        <SkillItem
+          title="Plutus/Cardano"
+          src="https://cryptologos.cc/logos/cardano-ada-logo.png"
+          color="primary"
+          value={intermediate}
+          starLevel={0}
+          indeterminate={true}
+        />
+        <SkillItem
+          title="Ergo"
+          src="https://s2.coinmarketcap.com/static/img/coins/200x200/1762.png"
+          color="#444"
+          value={intermediate}
+          starLevel={0}
+          indeterminate={true}
+        />
+      </Fragment>
+    );
+  };
   return (
     <div
       style={{
@@ -173,6 +216,7 @@ const Skills = () => {
       <Button.Group
         style={{
           alignSelf: phoneSize ? 'center' : 'flex-start',
+          maxWidth: '100%',
         }}
         size={phoneSize ? 'small' : 'large'}
       >
@@ -208,7 +252,13 @@ const Skills = () => {
           padding: '1%',
         }}
       >
-        {selected == 1 ? <FrontEnd /> : selected == 2 ? <BackEnd /> : null}
+        {selected == 1 ? (
+          <FrontEnd />
+        ) : selected == 2 ? (
+          <BackEnd />
+        ) : selected == 3 ? (
+          <Blockchain />
+        ) : null}
       </Card>
     </div>
   );
@@ -220,7 +270,15 @@ const Stars = (props: any) => {
   const sL = props.starLevel;
   return (
     <div style={{ display: 'flex', flexDirection: 'column' }}>
-      {sL < 3 ? <Text>Beginner</Text> : sL < 5 ? <Text>Intermediate</Text> : <Text>Expert</Text>}
+      {sL == 0 ? (
+        <Text>Learning</Text>
+      ) : sL < 3 && sL > 0 ? (
+        <Text>Beginner</Text>
+      ) : sL < 5 ? (
+        <Text>Intermediate</Text>
+      ) : (
+        <Text>Expert</Text>
+      )}
 
       <div style={{ display: 'flex' }}>
         <FontAwesomeIcon icon={solidStar} color="#FFF" />
