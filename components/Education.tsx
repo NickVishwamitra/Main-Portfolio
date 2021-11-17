@@ -30,20 +30,26 @@ const Education = () => {
           display: 'flex',
           flexDirection: 'column',
           alignItems: 'center',
-          gap: phoneSize ? '5%' : '10%',
+          gap: phoneSize ? '5%' : '15%',
         }}
       >
         <Text
           style={{
             fontWeight: 700,
-            fontSize: '3rem',
+            fontSize: phoneSize ? '2rem' : '3rem',
             zIndex: 3,
             color: colorScheme == 'dark' ? '#C1C2C5' : '#FFF',
           }}
         >
           Education
         </Text>
-        <Timeline active={2} bulletSize={35} lineWidth={5} color="red">
+        <Timeline
+          active={2}
+          bulletSize={35}
+          lineWidth={5}
+          color="red"
+          style={{ transform: phoneSize ? '' : 'scale(1.25)' }}
+        >
           <Timeline.Item
             title="Independence HS"
             bullet={
@@ -81,7 +87,6 @@ const Education = () => {
           </Timeline.Item>
           <Timeline.Item title="UT Dallas" bullet={<FontAwesomeIcon icon={faGraduationCap} />}>
             <Text size="sm">2022 - </Text>
-            <Text size="sm">Master's</Text>
           </Timeline.Item>
         </Timeline>
       </div>
@@ -92,20 +97,26 @@ const Education = () => {
           display: 'flex',
           flexDirection: 'column',
           alignItems: 'center',
-          gap: phoneSize ? '5%' : '10%',
+          gap: phoneSize ? '5%' : '15%',
         }}
       >
         <Text
           style={{
             fontWeight: 700,
-            fontSize: '3rem',
+            fontSize: phoneSize ? '2rem' : '3rem',
             zIndex: 3,
             color: colorScheme == 'dark' ? '#C1C2C5' : '#FFF',
           }}
         >
           Experience
         </Text>
-        <Timeline active={2} bulletSize={35} lineWidth={5} color="red">
+        <Timeline
+          active={2}
+          bulletSize={35}
+          lineWidth={5}
+          color="red"
+          style={{ transform: phoneSize ? '' : 'scale(1.25)' }}
+        >
           <Timeline.Item title="Wireless Expert">
             <Text size="xs">Jan 2019 - Nov 2019 </Text>
             <Text size="xs">Wireless Advocates </Text>
@@ -121,11 +132,7 @@ const Education = () => {
           >
             <Text size="sm">2020 - Now</Text>
           </Timeline.Item>
-          <Timeline.Item
-            title="Your Company 😀"
-            style={{ marginTop: '20%' }}
-            bullet={<FontAwesomeIcon icon={faBuilding} />}
-          >
+          <Timeline.Item title="Your Company 😀" bullet={<FontAwesomeIcon icon={faBuilding} />}>
             <Text size="sm">Soon</Text>
           </Timeline.Item>
         </Timeline>
