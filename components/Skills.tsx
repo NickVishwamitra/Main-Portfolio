@@ -220,25 +220,25 @@ const Skills = () => {
         size={phoneSize ? 'mini' : 'large'}
       >
         <Button
-          style={{ backgroundColor: selected == 1 ? '#E63946' : '#2C2E33' }}
+          style={{ backgroundColor: selected == 1 ? '#E63946' : '#2C2E33', height: '45px' }}
           onClick={() => selectSkillsPage(1)}
         >
           Front-End
         </Button>
         <Button
-          style={{ backgroundColor: selected == 2 ? '#E63946' : '#2C2E33' }}
+          style={{ backgroundColor: selected == 2 ? '#E63946' : '#2C2E33', height: '45px' }}
           onClick={() => selectSkillsPage(2)}
         >
           Back-End
         </Button>
         <Button
-          style={{ backgroundColor: selected == 3 ? '#E63946' : '#2C2E33' }}
+          style={{ backgroundColor: selected == 3 ? '#E63946' : '#2C2E33', height: '45px' }}
           onClick={() => selectSkillsPage(3)}
         >
           Blockchain
         </Button>
         <Button
-          style={{ backgroundColor: selected == 4 ? '#E63946' : '#2C2E33' }}
+          style={{ backgroundColor: selected == 4 ? '#E63946' : '#2C2E33', height: '45px' }}
           onClick={() => selectSkillsPage(4)}
         >
           Other
