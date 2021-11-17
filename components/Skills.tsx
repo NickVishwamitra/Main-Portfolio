@@ -170,7 +170,12 @@ const Skills = () => {
           My Skills
         </Text>
       </div>
-      <Button.Group style={{ alignSelf: phoneSize ? 'center' : 'flex-start' }}>
+      <Button.Group
+        style={{
+          alignSelf: phoneSize ? 'center' : 'flex-start',
+        }}
+        size={phoneSize ? 'small' : 'large'}
+      >
         <Button
           style={{ backgroundColor: selected == 1 ? '#E63946' : '#2C2E33' }}
           onClick={() => selectSkillsPage(1)}
