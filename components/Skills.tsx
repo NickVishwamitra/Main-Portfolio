@@ -216,9 +216,8 @@ const Skills = () => {
       <Button.Group
         style={{
           alignSelf: phoneSize ? 'center' : 'flex-start',
-          maxWidth: '100%',
         }}
-        size={phoneSize ? 'small' : 'large'}
+        size={phoneSize ? 'mini' : 'large'}
       >
         <Button
           style={{ backgroundColor: selected == 1 ? '#E63946' : '#2C2E33' }}
@@ -271,13 +270,13 @@ const Stars = (props: any) => {
   return (
     <div style={{ display: 'flex', flexDirection: 'column' }}>
       {sL == 0 ? (
-        <Text>Learning</Text>
+        <Text style={{ color: 'white' }}>Learning</Text>
       ) : sL < 3 && sL > 0 ? (
-        <Text>Beginner</Text>
+        <Text style={{ color: 'white' }}>Beginner</Text>
       ) : sL < 5 ? (
-        <Text>Intermediate</Text>
+        <Text style={{ color: 'white' }}>Intermediate</Text>
       ) : (
-        <Text>Expert</Text>
+        <Text style={{ color: 'white' }}>Expert</Text>
       )}
 
       <div style={{ display: 'flex' }}>
