@@ -13,13 +13,9 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Mantine Next template</title>
-        <meta name="description" content="Mantine Next template" />
-        <link
-          rel="icon"
-          href="https://mantine.dev/favicon.svg?v=c7bf473b30e5d81722ea0acf3a11a107"
-          type="image/svg+xml"
-        />
+        <title>Nick Vishwamitra Portfolio</title>
+        <meta name="description" content="Nick Vishwamitra Portfolio" />
+        <link rel="icon" href="../images/myLogo.ico" />
       </Head>
       <main>
         <Navigation />
