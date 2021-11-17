@@ -90,11 +90,11 @@ const Skills = () => {
           color="#E44E26"
         />
         <SkillItem
-          title="Node.js"
-          src="https://seeklogo.com/images/N/nodejs-logo-FBE122E377-seeklogo.com.png"
-          value={expert}
-          starLevel={5}
-          color="success"
+          title="GraphQL"
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/GraphQL_Logo.svg/1024px-GraphQL_Logo.svg.png"
+          value={intermediate}
+          starLevel={3}
+          color="#f4a"
         />
         <SkillItem
           title="SASS"
@@ -102,6 +102,13 @@ const Skills = () => {
           value={intermediate}
           starLevel={3}
           color="#f4a"
+        />
+        <SkillItem
+          title="Node.js"
+          src="https://seeklogo.com/images/N/nodejs-logo-FBE122E377-seeklogo.com.png"
+          value={intermediate - 10}
+          starLevel={3}
+          color="success"
         />
       </Fragment>
     );
@@ -156,7 +163,7 @@ const Skills = () => {
           title="Solidity"
           src="https://download.logo.wine/logo/Solidity/Solidity-Logo.wine.png"
           color="secondary"
-          value={intermediate}
+          value={beginner + 5}
           starLevel={2}
         />
 

@@ -49,7 +49,8 @@ const HeroSection = () => {
         style={{
           width: phoneSize ? '15%' : '3%',
           position: 'absolute',
-          top: phoneSize ? '40%' : '40%',
+          // top: phoneSize ? '40%' : '40%',
+          bottom: '-40%',
         }}
       ></lottie-player>
       <Switch
