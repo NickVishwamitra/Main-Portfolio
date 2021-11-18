@@ -8,10 +8,16 @@ import Navigation from '../components/Navigation';
 import Skills from '../components/Skills';
 import Education from '../components/Education';
 import ContactMe from '../components/ContactMe';
+import { useRef } from 'react';
 
 export default function Home() {
   const notifications = useNotifications();
   const theme = useMantineTheme();
+  const heroRef = useRef<any>();
+  const skillsRef = useRef<any>();
+  const educationRef = useRef<any>();
+  const contactRef = useRef<any>(null);
+
   return (
     <>
       <Head>
@@ -21,10 +27,10 @@ export default function Home() {
       </Head>
       <main>
         <Navigation />
-        <HeroSection />
+        <HeroSection contactRef={contactRef} />
         <Skills />
         <Education />
-        <ContactMe />
+        <ContactMe contactref={contactRef} />
       </main>
     </>
   );

@@ -4,7 +4,7 @@ import { useMantineColorScheme } from '@mantine/styles';
 import { Button } from '@nextui-org/react';
 import { useEffect } from 'react';
 
-const ContactMe = () => {
+const ContactMe = (props: any) => {
   useEffect(() => {
     import('@lottiefiles/lottie-player');
   });
@@ -34,6 +34,7 @@ const ContactMe = () => {
         alignItems: 'center',
         gap: phoneSize ? '2%' : '8%',
       }}
+      ref={props.contactref}
     >
       <Text
         style={{
@@ -95,7 +96,7 @@ const ContactMe = () => {
               style={{ marginBottom: '5%' }}
               onChange={(event: any) => form.setFieldValue('message', event.currentTarget.value)}
             ></Textarea>
-            <Button color="#e63946" style={{ alignSelf: 'flex-end', width: '20%' }} type="submit">
+            <Button color="#e63946" style={{ alignSelf: 'flex-end', width: '20%' }}>
               Submit
             </Button>
           </form>

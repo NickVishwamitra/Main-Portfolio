@@ -9,15 +9,15 @@ import Typist from 'react-typist';
 import styles from './styles/HeroSection.module.css';
 import Pic from '../images/profilePic.jpg';
 import { motion } from 'framer-motion';
-import { useClipboard, useMediaQuery } from '@mantine/hooks';
+import { useClipboard, useMediaQuery, useWindowScroll } from '@mantine/hooks';
 import { Switch } from '@nextui-org/react';
-const HeroSection = () => {
+const HeroSection = (props: any) => {
   const manTheme = useMantineTheme();
   const { colorScheme, toggleColorScheme } = useMantineColorScheme();
   const [typing, setTyping] = useState(true);
   const clipboard = useClipboard({ timeout: 500 });
   const phoneSize = useMediaQuery('(max-width: 600px)');
-
+  const [scroll, scrollTo] = useWindowScroll();
   const [emailOpened, setEmailOpened] = useState(false);
   const typingdone = () => {
     setTyping(false), setTyping(true);
@@ -150,7 +150,11 @@ const HeroSection = () => {
             </Button>
           </Popover>
         </div>
-        <Button radius="xl" styles={{ filled: { backgroundColor: '#e63946' } }}>
+        <Button
+          radius="xl"
+          styles={{ filled: { backgroundColor: '#e63946' } }}
+          onClick={() => props.contactRef.current?.scrollIntoView({ behavior: 'smooth' })}
+        >
           Contact Me
         </Button>
       </motion.div>
