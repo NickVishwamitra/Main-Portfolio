@@ -7,6 +7,7 @@ import HeroSection from '../components/HeroSection';
 import Navigation from '../components/Navigation';
 import Skills from '../components/Skills';
 import Education from '../components/Education';
+import ContactMe from '../components/ContactMe';
 
 export default function Home() {
   const notifications = useNotifications();
@@ -23,6 +24,7 @@ export default function Home() {
         <HeroSection />
         <Skills />
         <Education />
+        <ContactMe />
       </main>
     </>
   );
