@@ -30,7 +30,7 @@ const Education = () => {
           display: 'flex',
           flexDirection: 'column',
           alignItems: 'center',
-          gap: phoneSize ? '5%' : '15%',
+          gap: phoneSize ? '15%' : '15%',
         }}
       >
         <Text
@@ -48,7 +48,7 @@ const Education = () => {
           bulletSize={35}
           lineWidth={5}
           color="red"
-          style={{ transform: phoneSize ? 'scale(0.9)' : 'scale(1.25)' }}
+          style={{ transform: phoneSize ? 'scale(1.2)' : 'scale(1.25)' }}
         >
           <Timeline.Item
             title="Independence HS"
@@ -97,7 +97,7 @@ const Education = () => {
           display: 'flex',
           flexDirection: 'column',
           alignItems: 'center',
-          gap: phoneSize ? '5%' : '15%',
+          gap: phoneSize ? '15%' : '15%',
         }}
       >
         <Text
@@ -115,7 +115,7 @@ const Education = () => {
           bulletSize={35}
           lineWidth={5}
           color="red"
-          style={{ transform: phoneSize ? 'scale(0.9)' : 'scale(1.25)' }}
+          style={{ transform: phoneSize ? 'scale(1.2)' : 'scale(1.25)' }}
         >
           <Timeline.Item title="Wireless Expert">
             <Text size="xs">Jan 2019 - Nov 2019 </Text>

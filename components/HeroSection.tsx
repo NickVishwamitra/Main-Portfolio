@@ -40,20 +40,6 @@ const HeroSection = (props: any) => {
         alignItems: 'center',
       }}
     >
-      <lottie-player
-        autoplay
-        className={styles.lottie}
-        loop
-        mode="normal"
-        src="https://assets9.lottiefiles.com/packages/lf20_zxmmpjnt.json"
-        style={{
-          width: phoneSize ? '15%' : '3%',
-          position: 'absolute',
-          // top: phoneSize ? '40%' : '40%',
-          top: '80%',
-          maxHeight: '10%',
-        }}
-      ></lottie-player>
       <Switch
         checked={true}
         style={{
@@ -76,6 +62,7 @@ const HeroSection = (props: any) => {
           gap: '2%',
           height: '50%',
           transform: phoneSize ? 'scale(1)' : 'scale(1.25)',
+          marginTop: phoneSize ? '15%' : '5%',
         }}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -159,6 +146,15 @@ const HeroSection = (props: any) => {
           Contact Me
         </Button>
       </motion.div>
+      <div style={{ marginTop: '10%' }}>
+        <lottie-player
+          autoplay
+          className={styles.lottie}
+          loop
+          mode="normal"
+          src="https://assets9.lottiefiles.com/packages/lf20_zxmmpjnt.json"
+        ></lottie-player>
+      </div>
     </div>
   );
 };
