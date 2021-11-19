@@ -146,7 +146,7 @@ const HeroSection = (props: any) => {
           Contact Me
         </Button>
       </motion.div>
-      <div style={{ marginTop: '10%' }}>
+      <div style={{ marginTop: '10%', transform: phoneSize ? 'scale(0.75)' : '' }}>
         <lottie-player
           autoplay
           className={styles.lottie}
