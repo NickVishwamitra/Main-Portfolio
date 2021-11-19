@@ -50,7 +50,8 @@ const HeroSection = (props: any) => {
           width: phoneSize ? '15%' : '3%',
           position: 'absolute',
           // top: phoneSize ? '40%' : '40%',
-          bottom: '-40%',
+          top: '80%',
+          maxHeight: '10%',
         }}
       ></lottie-player>
       <Switch
