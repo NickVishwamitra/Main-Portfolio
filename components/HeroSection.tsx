@@ -46,7 +46,7 @@ const HeroSection = (props: any) => {
           // top: phoneSize ? '10%' : '5%',
           marginLeft: phoneSize ? '0%' : '75%',
           transform: phoneSize ? 'scale(1.25)' : '',
-          marginTop: phoneSize ? '25%' : '0',
+          // marginTop: phoneSize ? '25%' : '0',
         }}
         size="xlarge"
         iconOn={<FontAwesomeIcon icon={faMoon} style={{ color: '#5C5F66' }} />}
