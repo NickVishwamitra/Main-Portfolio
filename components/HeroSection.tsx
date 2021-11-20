@@ -34,7 +34,7 @@ const HeroSection = (props: any) => {
         padding: '5%',
         display: 'flex',
         flexDirection: 'column',
-        justifyContent: 'center',
+        // justifyContent: 'center',
         alignItems: 'center',
         overflowY: 'auto',
       }}
@@ -149,10 +149,10 @@ const HeroSection = (props: any) => {
         </Button>
       </motion.div>
       <div
+        className="tqijtji"
         style={{
           height: '10%',
           transform: 'scale(0.75)',
-          margin: 'auto',
         }}
       >
         <lottie-player
