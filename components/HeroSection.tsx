@@ -36,6 +36,7 @@ const HeroSection = (props: any) => {
         flexDirection: 'column',
         justifyContent: 'center',
         alignItems: 'center',
+        overflowY: 'auto',
       }}
     >
       <Switch
@@ -61,6 +62,7 @@ const HeroSection = (props: any) => {
           height: '60%',
           transform: phoneSize ? 'scale(1)' : 'scale(1.25)',
           marginTop: phoneSize ? '15%' : '5%',
+          overflowY: 'auto',
         }}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -144,7 +146,12 @@ const HeroSection = (props: any) => {
           Contact Me
         </Button>
       </motion.div>
-      <div style={{ marginTop: '10%', transform: phoneSize ? 'scale(0.75)' : 'scale(0.75)' }}>
+      <div
+        style={{
+          marginTop: '10%',
+          transform: phoneSize ? 'scale(0.75)' : 'scale(0.75)',
+        }}
+      >
         <lottie-player
           autoplay
           style={{ cursor: 'pointer' }}
