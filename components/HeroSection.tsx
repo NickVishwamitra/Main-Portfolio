@@ -34,7 +34,7 @@ const HeroSection = (props: any) => {
         padding: '5%',
         display: 'flex',
         flexDirection: 'column',
-        justifyContent: phoneSize ? 'flex-end' : 'center',
+        justifyContent: 'center',
         alignItems: 'center',
       }}
     >
@@ -42,7 +42,7 @@ const HeroSection = (props: any) => {
         checked={true}
         style={{
           position: 'absolute',
-          top: phoneSize ? '15%' : '5%',
+          top: phoneSize ? '10%' : '5%',
           marginLeft: phoneSize ? '0%' : '75%',
           transform: phoneSize ? 'scale(1.25)' : '',
         }}
