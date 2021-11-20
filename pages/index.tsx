@@ -14,7 +14,7 @@ export default function Home() {
   const notifications = useNotifications();
   const theme = useMantineTheme();
   const heroRef = useRef<any>();
-  const skillsRef = useRef<any>();
+  const skillsRef = useRef<any>(null);
   const educationRef = useRef<any>();
   const contactRef = useRef<any>(null);
 
@@ -27,8 +27,8 @@ export default function Home() {
       </Head>
       <main>
         <Navigation />
-        <HeroSection contactRef={contactRef} />
-        <Skills />
+        <HeroSection contactRef={contactRef} skillsRef={skillsRef} />
+        <Skills skillsRef={skillsRef} />
         <Education />
         <ContactMe contactref={contactRef} />
       </main>

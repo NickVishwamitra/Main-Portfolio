@@ -146,15 +146,16 @@ const HeroSection = (props: any) => {
           Contact Me
         </Button>
       </motion.div>
-      <div style={{ marginTop: '10%', transform: phoneSize ? 'scale(0.75)' : '' }}>
+      {/* <div style={{ marginTop: '10%', transform: phoneSize ? 'scale(0.75)' : '' }}>
         <lottie-player
           autoplay
-          className={styles.lottie}
+          style={{ cursor: 'pointer' }}
           loop
           mode="normal"
           src="https://assets9.lottiefiles.com/packages/lf20_zxmmpjnt.json"
+          onClick={() => props.skillsRef.current?.scrollIntoView({ behavior: 'smooth' })}
         ></lottie-player>
-      </div>
+      </div> */}
     </div>
   );
 };

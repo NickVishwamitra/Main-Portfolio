@@ -6,7 +6,7 @@ import { motion } from 'framer-motion';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStar as solidStar } from '@fortawesome/free-solid-svg-icons';
 import { Fragment, useEffect, useState } from 'react';
-const Skills = () => {
+const Skills = (props: any) => {
   const { colorScheme, toggleColorScheme } = useMantineColorScheme();
   // const [scroll, scrollTo] = useWindowScroll();
   const [selected, setSelected] = useState(3);
@@ -188,6 +188,7 @@ const Skills = () => {
   };
   return (
     <div
+      ref={props.skillsRef}
       style={{
         width: phoneSize ? '100vw' : '95vw',
         height: '100vh',
