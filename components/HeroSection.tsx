@@ -148,8 +148,8 @@ const HeroSection = (props: any) => {
       </motion.div>
       <div
         style={{
-          marginTop: '10%',
-          transform: phoneSize ? 'scale(0.75)' : 'scale(0.75)',
+          height: '10%',
+          transform: 'scale(0.75)',
         }}
       >
         <lottie-player

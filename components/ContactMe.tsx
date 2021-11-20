@@ -34,6 +34,7 @@ const ContactMe = (props: any) => {
         alignItems: 'center',
         gap: phoneSize ? '2%' : '8%',
         maxHeight: '150vh',
+        maxWidth: '100vw',
       }}
       ref={props.contactref}
     >
