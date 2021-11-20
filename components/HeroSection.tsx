@@ -28,7 +28,7 @@ const HeroSection = (props: any) => {
     <div
       style={{
         width: phoneSize ? '100vw' : '95vw',
-        height: '100vh',
+        height: phoneSize ? '850px' : '900px',
         backgroundColor: colorScheme == 'dark' ? '#1D3557' : '#6e96cf',
         marginLeft: phoneSize ? 0 : '5vw',
         padding: '5%',
@@ -42,10 +42,11 @@ const HeroSection = (props: any) => {
       <Switch
         checked={true}
         style={{
-          position: 'absolute',
-          top: phoneSize ? '10%' : '5%',
+          // position: 'absolute',
+          // top: phoneSize ? '10%' : '5%',
           marginLeft: phoneSize ? '0%' : '75%',
           transform: phoneSize ? 'scale(1.25)' : '',
+          marginTop: phoneSize ? '25%' : '0',
         }}
         size="xlarge"
         iconOn={<FontAwesomeIcon icon={faMoon} style={{ color: '#5C5F66' }} />}
@@ -60,15 +61,16 @@ const HeroSection = (props: any) => {
           flexDirection: 'column',
           gap: '2%',
           height: '60%',
-          transform: phoneSize ? 'scale(1)' : 'scale(1.25)',
-          marginTop: phoneSize ? '15%' : '5%',
+          // transform: phoneSize ? 'scale(1)' : 'scale(1.25)',
+          marginTop: phoneSize ? '0%' : '5%',
           overflowY: 'auto',
+          justifyContent: 'center',
         }}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1 }}
       >
-        <Avatar size={150} radius={200} src={Pic.src} style={{ boxShadow: ' 0px 0px 10px #222' }} />
+        <Avatar size={150} radius={200} src={Pic.src} style={{ boxShadow: ' 0px 0px 8px #222' }} />
         <Title style={{ color: 'white' }}>Nick Vishwamitra</Title>
         {typing ? (
           <Typist
@@ -150,6 +152,7 @@ const HeroSection = (props: any) => {
         style={{
           height: '10%',
           transform: 'scale(0.75)',
+          margin: 'auto',
         }}
       >
         <lottie-player

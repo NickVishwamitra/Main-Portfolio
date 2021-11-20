@@ -9,7 +9,7 @@ import { Fragment, useEffect, useState } from 'react';
 const Skills = (props: any) => {
   const { colorScheme, toggleColorScheme } = useMantineColorScheme();
   // const [scroll, scrollTo] = useWindowScroll();
-  const [selected, setSelected] = useState(3);
+  const [selected, setSelected] = useState(1);
   const [reactProgress, setReactProgress] = useState(0);
   const phoneSize = useMediaQuery('(max-width: 600px)');
 
@@ -191,7 +191,7 @@ const Skills = (props: any) => {
       ref={props.skillsRef}
       style={{
         width: phoneSize ? '100vw' : '95vw',
-        height: '100vh',
+        height: selected == 1 ? '1150px' : '900px',
         backgroundColor: colorScheme == 'dark' ? '#1D3557' : '#6E96CF',
         marginLeft: phoneSize ? '0' : '5vw',
         padding: phoneSize ? '5% 5%' : '5% 20%',

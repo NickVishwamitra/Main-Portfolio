@@ -24,17 +24,17 @@ const ContactMe = (props: any) => {
   return (
     <div
       style={{
-        width: phoneSize ? '100vw' : '95vw',
-        height: phoneSize ? '100vh' : '125vh',
+        width: phoneSize ? '100%' : '95%',
+        height: phoneSize ? '850px' : '900px',
         backgroundColor: colorScheme == 'dark' ? '#1D3557' : '#6e96cf',
-        marginLeft: phoneSize ? 0 : '5vw',
+        marginLeft: phoneSize ? 0 : '5%',
         padding: '5%',
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
         gap: phoneSize ? '2%' : '8%',
-        maxHeight: '150vh',
-        maxWidth: '100vw',
+        maxHeight: '150%',
+        maxWidth: '100%',
       }}
       ref={props.contactref}
     >

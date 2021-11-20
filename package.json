@@ -25,15 +25,17 @@
     "@nextui-org/react": "^1.0.1-alpha.57",
     "dayjs": "^1.10.5",
     "framer-motion": "^5.3.0",
-    "next": "11.0.1",
+    "next": "^11.1.2",
     "prism-react-renderer": "^1.2.1",
     "react": "17.0.2",
+    "react-custom-scrollbars": "^4.2.1",
     "react-dom": "17.0.2",
     "react-typist": "^2.0.5"
   },
   "devDependencies": {
     "@mantine/eslint-config": "3.1.0",
     "@types/react": "17.0.11",
+    "@types/react-custom-scrollbars": "^4.0.9",
     "@types/react-typing-animation": "^1.6.3",
     "@types/react-typist": "^2.0.3",
     "@typescript-eslint/eslint-plugin": "^4.26.0",

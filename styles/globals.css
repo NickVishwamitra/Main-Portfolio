@@ -9,9 +9,9 @@ body {
   overflow-x: hidden;
 }
 
-/* ::-webkit-scrollbar {
+::-webkit-scrollbar {
   display: none;
-} */
+}
 
 .Typist .Cursor {
   display: inline-block;

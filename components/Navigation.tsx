@@ -10,7 +10,7 @@ const Navigation = () => {
     <Fragment>
       <div
         style={{
-          height: '100vh',
+          height: '100%',
           width: '5vw',
           display: phoneSize ? 'none' : 'flex',
           position: 'fixed',
@@ -20,7 +20,7 @@ const Navigation = () => {
         <div style={{ width: '98%' }}></div>
         <div
           style={{
-            height: '100vh',
+            height: '100%',
             width: '2px',
             backgroundColor: 'white',
             marginLeft: 'auto',

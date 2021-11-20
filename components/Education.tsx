@@ -14,8 +14,8 @@ const Education = () => {
   return (
     <div
       style={{
-        width: phoneSize ? '100vw' : '95vw',
-        height: phoneSize ? '125vh' : '100vh',
+        width: phoneSize ? '100%' : '95%',
+        height: phoneSize ? '1000px' : '1000px',
         backgroundColor: colorScheme == 'dark' ? '#1D3557' : '#6e96cf',
         marginLeft: phoneSize ? 0 : '5vw',
         padding: '5%',
