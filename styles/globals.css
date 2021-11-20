@@ -2,8 +2,10 @@
 html,
 body {
   font-family: 'Source Sans Pro';
-  overflow-x: hidden;
   overflow-y: auto;
+  padding: 0;
+  margin: 0;
+  width: 100%;
 }
 
 /* ::-webkit-scrollbar {
