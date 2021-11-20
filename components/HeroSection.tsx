@@ -17,7 +17,6 @@ const HeroSection = (props: any) => {
   const [typing, setTyping] = useState(true);
   const clipboard = useClipboard({ timeout: 500 });
   const phoneSize = useMediaQuery('(max-width: 600px)');
-  const [scroll, scrollTo] = useWindowScroll();
   const [emailOpened, setEmailOpened] = useState(false);
   const typingdone = () => {
     setTyping(false), setTyping(true);
