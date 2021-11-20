@@ -26,7 +26,6 @@ const ContactMe = (props: any) => {
       style={{
         width: phoneSize ? '100vw' : '95vw',
         height: '100vh',
-        minHeight: '100vh',
         backgroundColor: colorScheme == 'dark' ? '#1D3557' : '#6e96cf',
         marginLeft: phoneSize ? 0 : '5vw',
         padding: '5%',
@@ -34,6 +33,7 @@ const ContactMe = (props: any) => {
         flexDirection: 'column',
         alignItems: 'center',
         gap: phoneSize ? '2%' : '8%',
+        maxHeight: '100vh',
       }}
       ref={props.contactref}
     >
@@ -54,7 +54,7 @@ const ContactMe = (props: any) => {
             loop
             mode="normal"
             src="https://assets2.lottiefiles.com/packages/lf20_fycwvm0l.json"
-            style={{ width: '100%', maxHeight: '100%' }}
+            style={{ width: '100%', maxHeight: '90%' }}
           ></lottie-player>
         </div>
         <div

@@ -21,6 +21,7 @@ const Education = () => {
         padding: '5%',
         display: 'flex',
         flexDirection: phoneSize ? 'column' : 'row',
+        maxHeight: phoneSize ? '125vh' : '100vh',
       }}
     >
       <div
