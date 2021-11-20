@@ -34,8 +34,7 @@ const HeroSection = (props: any) => {
         padding: '5%',
         display: 'flex',
         flexDirection: 'column',
-        gap: '2%',
-        justifyContent: 'center',
+        justifyContent: phoneSize ? 'flex-end' : 'center',
         alignItems: 'center',
       }}
     >
@@ -59,7 +58,7 @@ const HeroSection = (props: any) => {
           display: 'flex',
           flexDirection: 'column',
           gap: '2%',
-          height: '50%',
+          height: '60%',
           transform: phoneSize ? 'scale(1)' : 'scale(1.25)',
           marginTop: phoneSize ? '15%' : '5%',
         }}
@@ -67,7 +66,7 @@ const HeroSection = (props: any) => {
         animate={{ opacity: 1 }}
         transition={{ duration: 1 }}
       >
-        <Avatar size={150} radius={150} src={Pic.src} style={{ boxShadow: ' 0px 0px 10px #222' }} />
+        <Avatar size={150} radius={200} src={Pic.src} style={{ boxShadow: ' 0px 0px 10px #222' }} />
         <Title style={{ color: 'white' }}>Nick Vishwamitra</Title>
         {typing ? (
           <Typist
@@ -111,7 +110,7 @@ const HeroSection = (props: any) => {
             onClick={() => window.open('https://github.com/NickVishwamitra', '_blank')}
           ></FontAwesomeIcon>
           <Popover
-            position="right"
+            position="bottom"
             opened={emailOpened}
             withArrow
             onClose={() => setEmailOpened(false)}
@@ -145,7 +144,7 @@ const HeroSection = (props: any) => {
           Contact Me
         </Button>
       </motion.div>
-      <div style={{ marginTop: '10%', transform: phoneSize ? 'scale(0.75)' : '' }}>
+      <div style={{ marginTop: '10%', transform: phoneSize ? 'scale(0.75)' : 'scale(0.75)' }}>
         <lottie-player
           autoplay
           style={{ cursor: 'pointer' }}

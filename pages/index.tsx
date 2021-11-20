@@ -9,6 +9,7 @@ import Skills from '../components/Skills';
 import Education from '../components/Education';
 import ContactMe from '../components/ContactMe';
 import { useRef } from 'react';
+import Projects from '../components/Projects';
 
 export default function Home() {
   const notifications = useNotifications();
@@ -29,6 +30,7 @@ export default function Home() {
         <Navigation />
         <HeroSection contactRef={contactRef} skillsRef={skillsRef} />
         <Skills skillsRef={skillsRef} />
+        {/* <Projects /> */}
         <Education />
         <ContactMe contactref={contactRef} />
       </main>

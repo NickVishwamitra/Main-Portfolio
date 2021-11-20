@@ -6,9 +6,9 @@ body {
   overflow-y: auto;
 }
 
-::-webkit-scrollbar {
+/* ::-webkit-scrollbar {
   display: none;
-}
+} */
 
 .Typist .Cursor {
   display: inline-block;

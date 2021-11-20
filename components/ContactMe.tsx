@@ -25,7 +25,7 @@ const ContactMe = (props: any) => {
     <div
       style={{
         width: phoneSize ? '100vw' : '95vw',
-        height: '100vh',
+        height: phoneSize ? '100vh' : '125vh',
         backgroundColor: colorScheme == 'dark' ? '#1D3557' : '#6e96cf',
         marginLeft: phoneSize ? 0 : '5vw',
         padding: '5%',
@@ -33,7 +33,7 @@ const ContactMe = (props: any) => {
         flexDirection: 'column',
         alignItems: 'center',
         gap: phoneSize ? '2%' : '8%',
-        maxHeight: '100vh',
+        maxHeight: '150vh',
       }}
       ref={props.contactref}
     >
