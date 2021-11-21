@@ -88,7 +88,7 @@ const Projects = (props: any) => {
         style={{
           width: '100%',
           height: '100%',
-          padding: '10%',
+          padding: phoneSize ? '0%' : '10%',
           display: 'flex',
           flexDirection: 'column',
           gap: phoneSize ? '0%' : '10%',
