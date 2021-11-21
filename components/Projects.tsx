@@ -1,12 +1,12 @@
 import { Badge, Card, Col, Grid, Group, Text } from '@mantine/core';
-import { useMediaQuery } from '@mantine/hooks';
+import { useMediaQuery, useWindowScroll } from '@mantine/hooks';
 import { useMantineColorScheme } from '@mantine/styles';
 import hostingImage from '../images/hosting.png';
 import mineImage from '../images/minesweeper.png';
 import chatImage from '../images/chat.png';
 import portfolioImage from '../images/portfolio.png';
 import Image from 'next/image';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Button } from '@nextui-org/react';
 import { useRouter } from 'next/dist/client/router';
 const Projects = (props: any) => {
@@ -14,6 +14,7 @@ const Projects = (props: any) => {
   const ultraWide = useMediaQuery('(min-width: 1600px)');
   const { colorScheme, toggleColorScheme } = useMantineColorScheme();
   const router = useRouter();
+
   const ProjectItem = (props: any) => {
     return (
       <Card
@@ -60,6 +61,7 @@ const Projects = (props: any) => {
 
   return (
     <div
+      ref={props.projectsRef}
       style={{
         width: phoneSize ? '100vw' : '95vw',
         height: phoneSize ? '1800px' : '1300px',
@@ -162,7 +164,7 @@ const Projects = (props: any) => {
               image={mineImage}
               title="Minesweeper Betting"
               badgeTitle="First Project"
-              badgeColor="green"
+              badgeColor="orange"
               built="Next.js, Lottie, Mantine, NextUI, SASS, Framer Motion"
               link=""
             />

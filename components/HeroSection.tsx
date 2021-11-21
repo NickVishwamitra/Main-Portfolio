@@ -26,6 +26,7 @@ const HeroSection = (props: any) => {
   });
   return (
     <div
+      ref={props.heroRef}
       style={{
         width: phoneSize ? '100vw' : '95vw',
         height: phoneSize ? '850px' : '900px',

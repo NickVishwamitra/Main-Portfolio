@@ -15,10 +15,11 @@ import { Scrollbars } from 'react-custom-scrollbars';
 export default function Home() {
   const notifications = useNotifications();
   const theme = useMantineTheme();
-  const heroRef = useRef<any>();
+  const projectsRef = useRef<any>(null);
   const skillsRef = useRef<any>(null);
   const educationRef = useRef<any>();
   const contactRef = useRef<any>(null);
+  const heroRef = useRef<any>(null);
 
   return (
     <>
@@ -27,11 +28,17 @@ export default function Home() {
         <meta name="description" content="Nick Vishwamitra Portfolio" />
         <link rel="icon" href="../images/myLogo.ico" />
       </Head>
-      <Navigation />
-      <HeroSection contactRef={contactRef} skillsRef={skillsRef} />
+      <Navigation
+        contactRef={contactRef}
+        skillsRef={skillsRef}
+        projectsRef={projectsRef}
+        educationRef={educationRef}
+        heroRef={heroRef}
+      />
+      <HeroSection contactRef={contactRef} skillsRef={skillsRef} heroRef={heroRef} />
       <Skills skillsRef={skillsRef} />
-      <Projects />
-      <Education />
+      <Projects projectsRef={projectsRef} />
+      <Education educationRef={educationRef} />
       <ContactMe contactref={contactRef} />
     </>
   );

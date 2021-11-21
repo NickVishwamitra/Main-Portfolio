@@ -8,7 +8,7 @@ import {
   faDesktop,
 } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-const Education = () => {
+const Education = (props: any) => {
   const { colorScheme, toggleColorScheme } = useMantineColorScheme();
   const phoneSize = useMediaQuery('(max-width: 600px)');
   return (
@@ -23,6 +23,7 @@ const Education = () => {
         flexDirection: phoneSize ? 'column' : 'row',
         maxHeight: phoneSize ? '125vh' : '100vh',
       }}
+      ref={props.educationRef}
     >
       <div
         style={{

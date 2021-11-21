@@ -3,8 +3,10 @@ import { useForm, useMediaQuery } from '@mantine/hooks';
 import { useMantineColorScheme } from '@mantine/styles';
 import { Button } from '@nextui-org/react';
 import { useEffect } from 'react';
-
+import emailjs, { init } from 'emailjs-com';
 const ContactMe = (props: any) => {
+  init('user_RwdrUUxE9DSuG8dbxLaql');
+
   useEffect(() => {
     import('@lottiefiles/lottie-player');
   });
@@ -21,6 +23,23 @@ const ContactMe = (props: any) => {
       email: (value: any) => /^\S+@\S+$/.test(value),
     },
   });
+
+  const submitHandler = () => {
+    emailjs
+      .send('service_bsj8pj6', 'template_o8w7jc8', {
+        name: form.values.name,
+        email: form.values.email,
+        message: form.values.message,
+      })
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+  };
   return (
     <div
       style={{
@@ -98,7 +117,11 @@ const ContactMe = (props: any) => {
               style={{ marginBottom: '5%' }}
               onChange={(event: any) => form.setFieldValue('message', event.currentTarget.value)}
             ></Textarea>
-            <Button color="#e63946" style={{ alignSelf: 'flex-end', width: '20%' }}>
+            <Button
+              color="#e63946"
+              style={{ alignSelf: 'flex-end', width: '20%' }}
+              onClick={submitHandler}
+            >
               Submit
             </Button>
           </form>
