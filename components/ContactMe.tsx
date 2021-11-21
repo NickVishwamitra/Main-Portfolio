@@ -25,7 +25,7 @@ const ContactMe = (props: any) => {
     <div
       style={{
         width: phoneSize ? '100%' : '95%',
-        height: phoneSize ? '850px' : '900px',
+        height: phoneSize ? '1000px' : '900px',
         backgroundColor: colorScheme == 'dark' ? '#1D3557' : '#6e96cf',
         marginLeft: phoneSize ? 0 : '5%',
         padding: '5%',

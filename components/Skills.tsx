@@ -186,6 +186,41 @@ const Skills = (props: any) => {
       </Fragment>
     );
   };
+  const Other = () => {
+    return (
+      <Fragment>
+        <SkillItem
+          title="Microsoft Office"
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Microsoft_Office_logo_%282019%E2%80%93present%29.svg/2048px-Microsoft_Office_logo_%282019%E2%80%93present%29.svg.png"
+          color="#ff7300e0"
+          value={expert}
+          starLevel={5}
+        />
+        <SkillItem
+          title="Photoshop"
+          src="https://logos-world.net/wp-content/uploads/2020/11/Adobe-Photoshop-Logo.png"
+          color="primary"
+          value={intermediate}
+          starLevel={4}
+        />
+        <SkillItem
+          title="After Effects"
+          src="https://1000logos.net/wp-content/uploads/2020/07/After-Effects-Logo.png"
+          color="secondary"
+          value={beginner + 10}
+          starLevel={2}
+        />
+
+        <SkillItem
+          title="Illustrator"
+          src="https://vectorlogo4u.com/wp-content/uploads/2020/11/adobe-illustrator-cc-logo.png"
+          color="#ff7300e0"
+          value={beginner}
+          starLevel={1}
+        />
+      </Fragment>
+    );
+  };
   return (
     <div
       ref={props.skillsRef}
@@ -228,25 +263,41 @@ const Skills = (props: any) => {
         size={phoneSize ? 'mini' : 'large'}
       >
         <Button
-          style={{ backgroundColor: selected == 1 ? '#E63946' : '#2C2E33', height: '45px' }}
+          style={{
+            backgroundColor:
+              selected == 1 ? '#E63946' : colorScheme == 'light' ? '#335e99' : '#2C2E33',
+            height: '45px',
+          }}
           onClick={() => selectSkillsPage(1)}
         >
           Front-End
         </Button>
         <Button
-          style={{ backgroundColor: selected == 2 ? '#E63946' : '#2C2E33', height: '45px' }}
+          style={{
+            backgroundColor:
+              selected == 2 ? '#E63946' : colorScheme == 'light' ? '#335e99' : '#2C2E33',
+            height: '45px',
+          }}
           onClick={() => selectSkillsPage(2)}
         >
           Back-End
         </Button>
         <Button
-          style={{ backgroundColor: selected == 3 ? '#E63946' : '#2C2E33', height: '45px' }}
+          style={{
+            backgroundColor:
+              selected == 3 ? '#E63946' : colorScheme == 'light' ? '#335e99' : '#2C2E33',
+            height: '45px',
+          }}
           onClick={() => selectSkillsPage(3)}
         >
           Blockchain
         </Button>
         <Button
-          style={{ backgroundColor: selected == 4 ? '#E63946' : '#2C2E33', height: '45px' }}
+          style={{
+            backgroundColor:
+              selected == 4 ? '#E63946' : colorScheme == 'light' ? '#335e99' : '#2C2E33',
+            height: '45px',
+          }}
           onClick={() => selectSkillsPage(4)}
         >
           Other
@@ -254,7 +305,7 @@ const Skills = (props: any) => {
       </Button.Group>
       <Card
         style={{
-          backgroundColor: '#2C2E33',
+          backgroundColor: colorScheme == 'light' ? '#335e99' : '#2C2E33',
           height: phoneSize ? '70%' : '90%',
           padding: '1%',
         }}
@@ -265,6 +316,8 @@ const Skills = (props: any) => {
           <BackEnd />
         ) : selected == 3 ? (
           <Blockchain />
+        ) : selected == 4 ? (
+          <Other />
         ) : null}
       </Card>
     </div>

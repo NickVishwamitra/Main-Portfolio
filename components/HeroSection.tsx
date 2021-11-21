@@ -62,7 +62,7 @@ const HeroSection = (props: any) => {
           gap: '2%',
           height: '60%',
           // transform: phoneSize ? 'scale(1)' : 'scale(1.25)',
-          marginTop: phoneSize ? '0%' : '5%',
+          // marginTop: phoneSize ? '0%' : '5%',
           overflowY: 'auto',
           justifyContent: 'center',
         }}
@@ -159,6 +159,7 @@ const HeroSection = (props: any) => {
           autoplay
           style={{ cursor: 'pointer' }}
           loop
+          speed="1.5"
           mode="normal"
           src="https://assets9.lottiefiles.com/packages/lf20_zxmmpjnt.json"
           onClick={() => props.skillsRef.current?.scrollIntoView({ behavior: 'smooth' })}

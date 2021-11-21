@@ -30,7 +30,7 @@ export default function Home() {
       <Navigation />
       <HeroSection contactRef={contactRef} skillsRef={skillsRef} />
       <Skills skillsRef={skillsRef} />
-      {/* <Projects /> */}
+      <Projects />
       <Education />
       <ContactMe contactref={contactRef} />
     </>
