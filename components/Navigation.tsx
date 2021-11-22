@@ -135,7 +135,7 @@ const Navigation = (props: any) => {
               whileTap={{ scale: 0.75 }}
               color={scroll.y > 3500 && contactVisible ? '#e63946' : ''}
               onTap={() => {
-                props.contac.current?.scrollIntoView({ behavior: 'smooth' });
+                props.contactRef.current?.scrollIntoView({ behavior: 'smooth' });
               }}
             />
           </Tooltip>
