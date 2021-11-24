@@ -4,11 +4,14 @@ import { useMantineColorScheme } from '@mantine/styles';
 import { Button } from '@nextui-org/react';
 import { useEffect } from 'react';
 import emailjs, { init } from 'emailjs-com';
+import AOS from 'aos';
+import 'aos/dist/aos.css'; // You can also use <link> for styles
 const ContactMe = (props: any) => {
   init('user_RwdrUUxE9DSuG8dbxLaql');
 
   useEffect(() => {
     import('@lottiefiles/lottie-player');
+    AOS.init();
   });
   const { colorScheme, toggleColorScheme } = useMantineColorScheme();
   const phoneSize = useMediaQuery('(max-width: 600px)');
@@ -70,6 +73,7 @@ const ContactMe = (props: any) => {
       <div style={{ display: 'flex', flexDirection: phoneSize ? 'column' : 'row' }}>
         <div style={{ width: phoneSize ? '100%' : '50%' }}>
           <lottie-player
+            data-aos={phoneSize ? 'fade-up' : 'fade-right'}
             autoplay
             loop
             mode="normal"
@@ -90,6 +94,7 @@ const ContactMe = (props: any) => {
           <form
             onSubmit={form.onSubmit((values) => console.log(values))}
             style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}
+            data-aos={phoneSize ? 'fade-up' : 'fade-left'}
           >
             <TextInput
               label="Name"

@@ -7,6 +7,8 @@ import chatImage from '../images/chat.png';
 import portfolioImage from '../images/portfolio.png';
 import Image from 'next/image';
 import React, { useEffect, useState } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css'; // You can also use <link> for styles
 import { Button } from '@nextui-org/react';
 import { useRouter } from 'next/dist/client/router';
 const Projects = (props: any) => {
@@ -14,10 +16,15 @@ const Projects = (props: any) => {
   const ultraWide = useMediaQuery('(min-width: 1600px)');
   const { colorScheme, toggleColorScheme } = useMantineColorScheme();
   const router = useRouter();
-
+  useEffect(() => {
+    // here you can add your aos options
+    AOS.init();
+    // Aos.init({ startEvent: "load", once: false });
+  }, []);
   const ProjectItem = (props: any) => {
     return (
       <Card
+        data-aos={props.fade}
         shadow="sm"
         padding="xl"
         style={{
@@ -110,6 +117,7 @@ const Projects = (props: any) => {
             <Card
               shadow="sm"
               padding="xl"
+              data-aos={phoneSize ? 'fade-up' : 'fade-right'}
               style={{
                 backgroundColor: colorScheme == 'light' ? '#335e99' : '#2C2E33',
                 height: '350px',
@@ -161,6 +169,7 @@ const Projects = (props: any) => {
             }}
           >
             <ProjectItem
+              fade={phoneSize ? 'fade-up' : 'fade-left'}
               image={mineImage}
               title="Minesweeper Betting"
               badgeTitle="First Project"
@@ -182,6 +191,7 @@ const Projects = (props: any) => {
             }}
           >
             <ProjectItem
+              fade={phoneSize ? 'fade-up' : 'fade-right'}
               image={portfolioImage}
               title="My First Portfolio"
               badgeTitle="Responsive"
@@ -199,6 +209,7 @@ const Projects = (props: any) => {
             }}
           >
             <ProjectItem
+              fade={phoneSize ? 'fade-up' : 'fade-left'}
               image={chatImage}
               title="Chat App With Feed"
               badgeTitle="Requires Login"

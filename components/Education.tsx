@@ -8,9 +8,15 @@ import {
   faDesktop,
 } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import AOS from 'aos';
+import 'aos/dist/aos.css'; // You can also use <link> for styles
+import { useEffect } from 'react';
 const Education = (props: any) => {
   const { colorScheme, toggleColorScheme } = useMantineColorScheme();
   const phoneSize = useMediaQuery('(max-width: 600px)');
+  useEffect(() => {
+    AOS.init();
+  });
   return (
     <div
       style={{
@@ -26,6 +32,7 @@ const Education = (props: any) => {
       ref={props.educationRef}
     >
       <div
+        data-aos={phoneSize ? 'fade-up' : 'fade-right'}
         style={{
           width: phoneSize ? '100%' : '50%',
           height: phoneSize ? '50%' : '100%',
@@ -105,6 +112,7 @@ const Education = (props: any) => {
           alignItems: 'center',
           gap: phoneSize ? '15%' : '15%',
         }}
+        data-aos={phoneSize ? 'fade-up' : 'fade-left'}
       >
         <Text
           style={{

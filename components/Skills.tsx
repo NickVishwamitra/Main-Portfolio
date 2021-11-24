@@ -6,9 +6,13 @@ import { motion } from 'framer-motion';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStar as solidStar } from '@fortawesome/free-solid-svg-icons';
 import { Fragment, useEffect, useState } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css'; // You can also use <link> for styles
+// ..
 const Skills = (props: any) => {
   const { colorScheme, toggleColorScheme } = useMantineColorScheme();
   // const [scroll, scrollTo] = useWindowScroll();
+
   const [selected, setSelected] = useState(1);
   const [reactProgress, setReactProgress] = useState(0);
   const phoneSize = useMediaQuery('(max-width: 600px)');
@@ -17,7 +21,11 @@ const Skills = (props: any) => {
   const beginner = 25;
   const intermediate = 65;
   const expert = 100;
-
+  useEffect(() => {
+    // here you can add your aos options
+    AOS.init();
+    // Aos.init({ startEvent: "load", once: false });
+  }, []);
   const selectSkillsPage = (page: any) => {
     setSelected(page);
   };
@@ -304,6 +312,7 @@ const Skills = (props: any) => {
         </Button>
       </Button.Group>
       <Card
+        data-aos="fade-up"
         style={{
           backgroundColor: colorScheme == 'light' ? '#335e99' : '#2C2E33',
           height: phoneSize ? '70%' : '90%',

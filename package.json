@@ -23,6 +23,7 @@
     "@mantine/notifications": "3.1.0",
     "@mantine/prism": "^3.1.9",
     "@nextui-org/react": "^1.0.1-alpha.57",
+    "aos": "^3.0.0-beta.6",
     "dayjs": "^1.10.5",
     "emailjs-com": "^3.2.0",
     "framer-motion": "^5.3.0",
@@ -35,6 +36,7 @@
   },
   "devDependencies": {
     "@mantine/eslint-config": "3.1.0",
+    "@types/aos": "^3.0.4",
     "@types/react": "17.0.11",
     "@types/react-custom-scrollbars": "^4.0.9",
     "@types/react-typing-animation": "^1.6.3",

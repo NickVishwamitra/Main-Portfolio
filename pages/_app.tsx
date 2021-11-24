@@ -10,6 +10,7 @@ import {
 import { NotificationsProvider } from '@mantine/notifications';
 import { useState } from 'react';
 import '../styles/globals.css';
+
 export default function App(props: AppProps) {
   const [colorScheme, setColorScheme] = useState<any>('dark');
   const toggleColorScheme = (value?: ColorScheme) =>
