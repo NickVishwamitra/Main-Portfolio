@@ -11,6 +11,9 @@ import Pic from '../images/profilePic.jpg';
 import { motion } from 'framer-motion';
 import { useClipboard, useMediaQuery, useWindowScroll } from '@mantine/hooks';
 import { Switch } from '@nextui-org/react';
+import AOS from 'aos';
+
+import 'aos/dist/aos.css'; // You can also use <link> for styles
 const HeroSection = (props: any) => {
   const manTheme = useMantineTheme();
   const { colorScheme, toggleColorScheme } = useMantineColorScheme();
@@ -18,6 +21,11 @@ const HeroSection = (props: any) => {
   const clipboard = useClipboard({ timeout: 500 });
   const phoneSize = useMediaQuery('(max-width: 600px)');
   const [emailOpened, setEmailOpened] = useState(false);
+  useEffect(() => {
+    // here you can add your aos options
+    AOS.init();
+    // Aos.init({ startEvent: "load", once: false });
+  }, []);
   const typingdone = () => {
     setTyping(false), setTyping(true);
   };
@@ -43,11 +51,8 @@ const HeroSection = (props: any) => {
       <Switch
         checked={true}
         style={{
-          // position: 'absolute',
-          // top: phoneSize ? '10%' : '5%',
           marginLeft: phoneSize ? '0%' : '75%',
           transform: phoneSize ? 'scale(1.25)' : '',
-          // marginTop: phoneSize ? '25%' : '0',
         }}
         size="xlarge"
         iconOn={<FontAwesomeIcon icon={faMoon} style={{ color: '#5C5F66' }} />}
@@ -67,9 +72,7 @@ const HeroSection = (props: any) => {
           overflowY: 'auto',
           justifyContent: 'center',
         }}
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 1 }}
+        data-aos="fade-up"
       >
         <Avatar size={150} radius={200} src={Pic.src} style={{ boxShadow: ' 0px 0px 8px #222' }} />
         <Title style={{ color: 'white' }}>Nick Vishwamitra</Title>
@@ -157,6 +160,7 @@ const HeroSection = (props: any) => {
         }}
       >
         <lottie-player
+          data-aos="fade-up"
           autoplay
           style={{ cursor: 'pointer' }}
           loop

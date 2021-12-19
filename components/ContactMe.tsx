@@ -73,7 +73,7 @@ const ContactMe = (props: any) => {
       <div style={{ display: 'flex', flexDirection: phoneSize ? 'column' : 'row' }}>
         <div style={{ width: phoneSize ? '100%' : '50%' }}>
           <lottie-player
-            data-aos={phoneSize ? 'fade-up' : 'fade-right'}
+            data-aos={phoneSize ? 'fade-up' : ''}
             autoplay
             loop
             mode="normal"
@@ -94,7 +94,7 @@ const ContactMe = (props: any) => {
           <form
             onSubmit={form.onSubmit((values) => console.log(values))}
             style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}
-            data-aos={phoneSize ? 'fade-up' : 'fade-left'}
+            data-aos={phoneSize ? 'fade-up' : ''}
           >
             <TextInput
               label="Name"

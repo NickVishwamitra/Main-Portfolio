@@ -8,8 +8,9 @@ import portfolioImage from '../images/portfolio.png';
 import Image from 'next/image';
 import React, { useEffect, useState } from 'react';
 import AOS from 'aos';
+
 import 'aos/dist/aos.css'; // You can also use <link> for styles
-import { Button } from '@nextui-org/react';
+import { Button, Loading } from '@nextui-org/react';
 import { useRouter } from 'next/dist/client/router';
 const Projects = (props: any) => {
   const phoneSize = useMediaQuery('(max-width: 600px)');
@@ -33,7 +34,7 @@ const Projects = (props: any) => {
         }}
       >
         <Card.Section>
-          <Image src={props.image} height={1100} alt="Norway" />
+          <Image src={props.image} height={1100} alt="Norway" loading="eager" />
         </Card.Section>
         <div style={{ display: 'flex', flexDirection: 'column' }}>
           <div

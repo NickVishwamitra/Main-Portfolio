@@ -140,7 +140,7 @@ const Navigation = (props: any) => {
             />
           </Tooltip>
         </div>
-        <div
+        {/* <div
           style={{
             height: '100%',
             width: '2px',
@@ -148,7 +148,7 @@ const Navigation = (props: any) => {
             marginLeft: 'auto',
             opacity: '20%',
           }}
-        ></div>
+        ></div> */}
       </div>
     </Fragment>
   );
